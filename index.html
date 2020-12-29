@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</header>
+
+<body>
+
+    <h1 id="title">ROCK PAPER SCISSORS</h1>
+    <h3 id= "instruction"> First to 7 wins</h3>
+    <div id="container">
+
+        <div id="userBox" class="scoreBox">
+            <div class='scores'>
+                <h1 id="user"> User : </h1>
+                <h1 id='userScore' class ='digit'></h1>
+            </div>
+            <div id="userRPS" class="rps">
+                <img id='Rock' class='userPick' src="Logos/rock.jpg" alt="User Rock" height="105" width='105'>
+                <img id='Paper' class='userPick' src="Logos/Paper.jpg" alt="User Paper" height="105" width='105'>
+                <img id='Scissor' class='userPick' src="Logos/Scissors.jpg" alt="User Scissors" height="105"
+                    width='105'>
+            </div>
+
+        </div>
+        <div id="computerBox" class="scoreBox">
+            <div class='scores'>
+                <h1 id="comp" style="color:red;"> Computer : </h1>
+                <h1 id='compScore' class ='digit'></h1>
+            </div>
+            <div id="userRPS" class="rps">
+                <img id='compRock' class='computerPick' src="Logos/rock.jpg" alt="Computer Rock" height="105"
+                    width='105'>
+                <img id='compPaper' class='computerPick' src="Logos/Paper.jpg" alt="Computer Paper" height="105"
+                    width='105'>
+                <img id='compScissor' class='computerPick' src="Logos/Scissors.jpg" alt="Computer Scissors" height="105"
+                    width='105'>
+            </div>
+        </div>
+        <div id="gameOver" style = "display:none;">
+            <h2 id='gameResult'></h2>
+            <button id = 'restart'>Play Again?</button>
+        </div>
+    </div>
+    
+    
+</body>
+<script src="script.js"></script>
+
+</html>
