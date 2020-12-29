@@ -104,12 +104,10 @@ function gameFinish(user, computer) {
     document.getElementById("gameOver").style.display = "inline";
     if (user > computer) {
         document.getElementById('gameResult').innerHTML = "Congtats! You have beat the Computer by a score of " + user + " to " + computer;
-    } else if (computer > user ){
+    } else {
         document.getElementById('gameResult').innerHTML = "Sorry! You have lost to the Computer by a score of " + user + " to " + computer;
     }
-    else{
-        document.getElementById('gameResult').innerHTML = "You and the computer tied with a score of " + user + " to " + computer;
-    }
+    
     
 
 }
@@ -142,10 +140,7 @@ function playRound(user,) {
         document.querySelector(".display").style.display = 'flex';
     }
 
-    //game has ended. Display results
-    if (round == 7) {
-        gameFinish(userScore, computerScore);
-    }
+    
     let computer = computerPlay();
     let result = "You picked an invalid choice";
     if (user.localeCompare(choice[0]) == 0) {        // user chose rock
@@ -200,6 +195,10 @@ function playRound(user,) {
         }
     }
     round++;
+    //game has ended. Display results
+    if (userScore == 7 || computerScore == 7) {
+        gameFinish(userScore, computerScore);
+    }
 }
 
 
